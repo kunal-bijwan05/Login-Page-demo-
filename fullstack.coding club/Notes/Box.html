@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align 
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.box {
+  background: #e0e0e0;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <h2> Flexbox Layout</h2>
+    <div class="flex-container" > 
+    <div class="box" > Flex 1</div>
+    <div class="box" > Flex 2</div>
+    <div class="box" > Flex 3</div>
+</div>
+    <h2>Grid Layout</h2>
+        <div class="grid-container">
+            <div class="box">Grid 1</div>
+            <div class="box">Grid 2</div>
+            <div class="box">Grid 3</div>
+            <div class="box">Grid 4</div>
+            <div class="box">Grid 5</div>
+            <div class="box">Grid 6</div>
+        </div>
+</body>
+</html>

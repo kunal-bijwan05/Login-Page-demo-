@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Value Calculator</title>
+    <link rel="stylesheet" href="metalCalculater/style.css">
+</head>
+
+<body>
+    <h1> Metal Value Calculator </h1>
+    <label for="metal">Select Metal: </label>
+    <select id="metal">
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="platinum">Platinum</option>
+    </select>
+    <label for="weight">Enter Weight(grams): </label>
+    <input type="number" id="weight" placeholder="Weight in grams" />
+
+    <label for="currency"> Currency </label>
+    <select id="currency">
+        <option value="INR">INR</option>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+    </select>
+
+    <div id="result" style="margin-top:22px; font-size:1.1em; color:#224e74; font-weight:600;"></div>
+
+    <script>
+        // Example metal prices per gram (USD). Replace with live API for real rates.
+        const metalPricesUSD = {
+            gold: 62.0,
+            silver: 0.75,
+            platinum: 31.0
+        };
+        // Example conversion rates. Replace with API for real rates.
+        const currencyRates = {
+            USD: 1,
+            INR: 83,
+            EUR: 0.93
+        };
+        const symbols = { USD: "$", INR: "₹", EUR: "€" };
+
+        function calculateValue() {
+            const metal = document.getElementById("metal").value;
+            const weight = parseFloat(document.getElementById("weight").value);
+            const currency = document.getElementById("currency").value;
+
+            if (!weight || weight <= 0) {
+                document.getElementById("result").textContent = "Enter a valid weight.";
+                return;
+            }
+
+            const valueUSD = metalPricesUSD[metal] * weight;
+            const valueInCurrency = valueUSD * currencyRates[currency];
+            document.getElementById("result").textContent =
+                `Value: ${symbols[currency]}${valueInCurrency.toFixed(2)} (${weight}g ${metal}) in ${currency}`;
+        }
+
+        document.getElementById("metal").addEventListener("change", calculateValue);
+        document.getElementById("weight").addEventListener("input", calculateValue);
+        document.getElementById("currency").addEventListener("change", calculateValue);
+
+        window.onload = calculateValue;
+    </script>
+</body>
+
+</html>

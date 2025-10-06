@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Anime Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #2d3436;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #34495e;
+            padding: 1rem 2rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 1.5rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 720px;
+            margin: 0 auto 2rem;
+            color: #444;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 1.5rem 1rem;
+            flex: 1 1 280px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            text-align: left;
+        }
+
+        .feature-box h3 {
+            margin-top: 0;
+            color: #34495e;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: #ecf0f1;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 0.5rem;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AnimeWorld</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Reviews</a>
+            <a href="#">News</a>
+            <a href="#">Community</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Discover The Best Anime Series</h2>
+        <img src="https://cdn.pixabay.com/photo/2017/04/30/23/33/anime-2271863_1280.jpg" alt="Anime Character">
+        <p>Welcome to AnimeWorld, your ultimate destination for anime reviews, news, and community discussions. Stay
+            updated with the latest episodes, trending shows, and exclusive content from the anime universe.</p>
+        <div class="features">
+            <div class="feature-box">
+                <h3>Curated Reviews</h3>
+                <p>Read detailed and honest reviews from fellow fans to find your next favorite anime.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Latest News</h3>
+                <p>Keep up-to-date with announcements, release dates, and exclusive sneak peeks.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Active Community</h3>
+                <p>Join discussions, participate in polls, and share your anime experiences with others.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 AnimeWorld. All rights reserved.
+    </footer>
+</body>
+
+</html>
